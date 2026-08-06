@@ -1,10 +1,17 @@
-* {
-  box-sizing: border-box;
+:root {
+  --blue-color: #00acdc;
 }
 
 html {
+  box-sizing: border-box;
   font-family: Roboto, sans-serif;
   font-weight: 500;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -34,6 +41,7 @@ body {
 
 .nav {
   margin-left: auto;
+  transform: translateX(-5px);
 }
 
 .nav__list {
@@ -62,7 +70,7 @@ body {
 
   height: 60px;
 
-  color: #000;
+  color: #060b35;
 
   font-family: Roboto, sans-serif;
   font-size: 12px;
@@ -78,15 +86,15 @@ body {
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link.is-active::after {
-  content: '';
+  content: "";
 
   position: absolute;
 
@@ -96,5 +104,5 @@ body {
   width: 100%;
   height: 4px;
 
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
