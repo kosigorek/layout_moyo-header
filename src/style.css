@@ -1,10 +1,17 @@
-* {
-  box-sizing: border-box;
+:root {
+  --blue-color: #00acdc;
 }
 
 html {
+  box-sizing: border-box;
   font-family: Roboto, sans-serif;
   font-weight: 500;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -12,10 +19,9 @@ body {
 }
 
 .header {
-  height: 60px;
-
   display: flex;
   align-items: center;
+  height: 60px;
 
   padding-left: 50px;
   padding-right: 50px;
@@ -27,7 +33,6 @@ body {
 
 .logo__image {
   display: block;
-
   width: 40px;
   height: 40px;
 }
@@ -38,7 +43,6 @@ body {
 
 .nav__list {
   display: flex;
-  align-items: center;
 
   margin: 0;
   padding: 0;
@@ -65,35 +69,32 @@ body {
   color: #000;
 
   font-size: 12px;
-  line-height: 15px;
   font-weight: 500;
-
+  line-height: 15px;
   text-transform: uppercase;
   text-decoration: none;
-
   white-space: nowrap;
 
   transition: color 0.3s;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .nav__link.is-active::after {
   content: '';
 
   position: absolute;
-
   bottom: 0;
   left: 0;
 
   width: 100%;
   height: 4px;
 
-  background-color: #00acdc;
+  background-color: var(--blue-color);
 }
